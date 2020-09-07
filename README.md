@@ -36,9 +36,9 @@ Matrimonial webpage Using Bootstrap classes
 
 ## Demo
    • If you are searching for __Code__,.. you won't find it here. Click the link mentioned below for the same:<br />
-     Link: https://github.com/Karanmehra7107/bootstrap-webpage-assignments
+     Link: https://github.com/Karanmehra7107/bootstrap-matrimonial-assignments
 
-   • https://karanmehra7107.github.io/bootstrap-webpage-assignments/
+   • https://karanmehra7107.github.io/bootstrap-matrimonial-assignment-/index.html
 
    • Please do ⭐ the repository, if it helped you in anyway.
 
