@@ -24,13 +24,20 @@ Matrimonial webpage Using Bootstrap classes
 
    __output__
 
-![image](https://user-images.githubusercontent.com/62024355/92321375-0ecece80-f047-11ea-9fd7-7eb3d0648605.png)
+![image](https://user-images.githubusercontent.com/62024355/92404196-96eccb00-f150-11ea-9777-5ca648cd8146.png)
 
-![image](https://user-images.githubusercontent.com/62024355/92321452-aaf8d580-f047-11ea-8d2d-20ebd48c2147.png)
 
-![image](https://user-images.githubusercontent.com/62024355/92321463-c9f76780-f047-11ea-8d43-8f657cd3e4db.png)
+![image](https://user-images.githubusercontent.com/62024355/92404226-aa983180-f150-11ea-8e7d-26dca4d68f04.png)
 
-![image](https://user-images.githubusercontent.com/62024355/92321469-de3b6480-f047-11ea-8792-0d9c4544a149.png)
+
+![image](https://user-images.githubusercontent.com/62024355/92404265-bab01100-f150-11ea-9767-9dde13ad9e53.png)
+
+
+![image](https://user-images.githubusercontent.com/62024355/92404299-cb608700-f150-11ea-96b8-42acfbba7649.png)
+
+
+![image](https://user-images.githubusercontent.com/62024355/92404317-d87d7600-f150-11ea-9075-e31ce14132cd.png)
+
 
 
 
