@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>VIVAH</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+    .open-button {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+   .open-button:hover {
+
+
+
+  background-color: black;
+  color: green;
+  padding: 18px 23px;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: grey;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+* {box-sizing: border-box;}
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 6;
+}
+    body{
+      background-image: url(photo-1594397856557-75aca2e35b00.jfif);
+    }
+  
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+                                                                       .row.content {height: 1550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    #male{
+color: blue;
+      
+    }
+
+     
+     #male:hover{
+color: green;
+      
+    }   
+
+
+    .site-footer
+{
+
+
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+
+
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+
+
+
+<button class="open-button" onclick="openForm()">My Chat <span class="badge badge-secondary">New</span></button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Ridhi</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid" >
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Vivah  </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">Geo</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>VIVAH  &nbsp;&nbsp;&nbsp; <img src="download.png" class="img-rounded" height="80px" width="160px"> </h2> 
+      <ul class="nav nav-pills nav-stacked">
+
+        <li class="active"><a href="#section1">Details <span class="badge badge-primary">existing page</span></a></li>
+
+
+
+
+
+        <ul class="nav navbar-nav navbar-right">
+      <li ><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+       
+
+ 
+
+<hr>
+
+<li><div class="form-group">
+  <label for="usr">Your Name:</label>
+  <input type="text" class="form-control" id="usr">
+</div>
+<div class="form-group">
+  <label for="usr">Caste:</label>
+  <input type="text" class="form-control" id="usr">
+</div>
+</li>
+<form action="/action_page.php">
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="submit" value="select">
+</form>
+<br>
+<form action="/action_page.php" method="get">
+  <label for="browser">Height:</label>
+  <input list="browsers" name="browser" id="browser">
+  <datalist id="browsers">
+    <option value="5'">
+    <option value="5.5'">
+    <option value="6'">
+    <option value="6.5'">
+    <option value="4.5'">
+  </datalist>
+  <input type="submit">
+</form>
+<br>
+
+ <li class="active"><a href="#section1">
+<p> <b id="Kundli"><center>Kundali for perfect match</center></b> </p>
+<form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit" style="color: green">
+</form></a></li><br>
+
+<form>
+  <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="switch1">
+    <label class="custom-control-label" for="switch1">Match Kundli</label>
+  </div>
+</form>
+
+
+
+        
+       <li><button type="button" class="btn btn-primary active">Basic account</button>
+<button type="button" class="btn btn-primary disabled">Prime account</button></li>
+      </ul>
+
+      
+<br><br><p>Search by area</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6413.19159435471!2d75.69829586565221!3d31.251353593023808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x505694a3e3500986!2sComputer%20Applications%20and%20Research%20Department%20LPU%20Block%2038!5e1!3m2!1sen!2sin!4v1599488905443!5m2!1sen!2sin" width="350" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="img-rounded"></iframe>
+ <div class="form-check" id="male">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">  Agree with terms and conditions
+  </label><br><center>
+  <button type="button" class="btn btn-success">Match</button>
+</center>
+<br>
+
+<hr>
+
+<img src="qr-code.png" height="300" width="350" class="img-thumbnail">
+<hr class="hr">
+<center>
+<button type="button" class="btn btn-primary btn-xs">Download our app <span class="badge badge-primary">New</span></button>
+</center></div>
+
+
+    </div>
+    <br>
+    <br>
+  
+
+
+
+    <div class="col-sm-9">
+       <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle  btn-block" type="button" data-toggle="dropdown">Looking for ?
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Bride</a></li>
+    <li><a href="#">Groom</a></li>
+    
+  </ul><center>
+    <form class="navbar-form navbar-right" action="/action_page.php">
+      <div class="form-group" >
+        <input type="text" class="form-control" placeholder="Search" name="search">
+      </div>
+      <button type="submit" class="btn btn-default">Search</button> 
+    </form></center>
+</div>
+      <div class="well">
+        <h4>Dashboard</h4>
+        
+
+
+          <div class="row">
+    <div class="col-sm-3">
+      <p>Amanindar age:27</p>
+      <img src="download (3).jfif" class="img-rounded" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Balvindar age:29</p>
+      <img src="images (6).jfif" class="img-rounded" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Culvinder age:29</p>
+      <img src="cb782bd9da27e7b6dcd7974d2bb3a42e.jpg"  class="img-rounded" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Davinder age:29</p>
+      <img src="19f5f323d43f922fafa6d771e18eeb95.jpg" class="img-rounded" style="width:100%" alt="Image">
+    </div>
+
+
+  </div>
+
+<hr>
+     <div class="row">
+    <div class="col-sm-3">
+      <p>Anaanya age:25</p>
+      <img src="screen-1.jpg" class="img-rounded" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Mahima age:27</p>
+      <img src="images (7).jfif" class="img-rounded" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Ridhi age:30</p>
+      <img src="3.-Manushi-Chhillar.jpg" class="img-rounded" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Poonam age:28</p>
+      <img src="6f57ba87b7285a4ac17488a939753122.jpg" class="img-rounded" style="width:100%" alt="Image">
+    </div>
+  </div>
+      </div>
+
+    <h1>Stories</h1>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <img src="images (3).jfif" class="img-rounded" style="width:100%" alt="Image">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+             <img src="pexels-photo-2174662.jpeg" class="img-rounded" style="width:100%" alt="Image">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <img src="portrait-happy-lovely-indian-couple-smiling-posing-camera-pleasend-signs-together-over-green-background-portrait-144540942.jpg" class="img-rounded" style="width:100%" alt="Image">
+          
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+           <img src="images (4).jfif" class="img-rounded" style="width:100%" alt="Image">
+          </div>
+        </div>
+      </div>
+      <h1>Wedding destinations</h1>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Jalandhar</p> 
+           <img src="images (8).jfif" class="img-rounded" style="width:100%" alt="Image">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Jodhpur</p> 
+             <img src="6e3081b1250c7386fef22c4e6a88036e.jpg" class="img-rounded" style="width:100%" alt="Image">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Shimla</p> 
+             <img src="fc172dc443d67f5bf691d28ee885874c.jpg" class="img-rounded" style="width:100%" alt="Image">
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Site footer -->
+    <footer class="site-footer">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Vivah.com is one of India’s leading matrimonial websites that has helped lakhs of members find their perfect life partner.
+
+We believe choosing a life partner is a big and important decision, and hence work towards giving a simple and secure matchmaking experience for you and your family. Each profile registered with us goes through a manual screening process before going live on site; we provide superior privacy controls for Free; and also verify contact information of members.
+
+You can register for Free and search according to your specific criteria on age, height, community, profession, income, location and much more- on your computer, tablet or mobile. Regular custom mails and notifications make the process easier and take you closer to your vivah!</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="#">Wedding destinations planner</a></li>
+              <li><a href="#">Wedding planner</a></li>
+              <li><a href="#">Meetups</a></li>
+              <li><a href="#">Get-together</a></li>
+              <li><a href="#">Hotels</a></li>
+       
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="https://github.com/Karanmehra7107">About Us</a></li>
+              <li><a href="https://github.com/Karanmehra7107">Contact Us</a></li>
+              <li><a href="https://github.com/Karanmehra7107">Contribute</a></li>
+              <li><a href="https://github.com/Karanmehra7107">Privacy Policy</a></li>
+              <li><a href="https://github.com/Karanmehra7107">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="pagination">
+        	<button type="button" class="btn btn-primary"><span class="badge"><a href="index.html" data-toggle="tooltip" data-placement="Top" title="current page!">Current home page</a></abbr></span></button>    
+  
+  <li><a href="index1.html "  data-toggle="tooltip" data-placement="top" title="page-1!">next </a></li>
+  <li><a href="index2.html"  data-toggle="tooltip" data-placement="top" title="page-2!">2 </a></li>
+ 
+</ul>
+<br>
+  <button type="button" class="btn btn-primary"><span class="badge">pg-3</span></button>    
+  
+     <button type="button" class="btn btn-success"><a href="index1.html"> </a><span class="badge">pg-4</span></button>    
+  <button type="button" class="btn btn-danger"><a href="index2.html"> </a><span class="badge">pg-5</span></button>     
+        <hr>
+      </div>
+
+      <center>
+      	<div class="container">
+  
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Download android app <span class="badge badge-secondary">New</span>
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Oops! app is under developing</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        comming soon!
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer"><center>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </center></div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+      </center>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+         <a href="https://github.com/Karanmehra7107">Karan Mehra 11815793 </a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://github.com/Karanmehra7107"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://github.com/Karanmehra7107"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="https://github.com/Karanmehra7107"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="https://github.com/Karanmehra7107"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+</body>
+</html>
