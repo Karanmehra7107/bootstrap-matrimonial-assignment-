@@ -65,11 +65,24 @@ This project is divided into two part:
 2.Usage of Bootstrap classes.
 
 
+
 ## Directory Tree 
 ```
-
+├── css
+├── fonts
+├── js
 ├── images
+│   ├── weding.jpeg
+│   ├── couple.jpg
+│   ├── img.png
+│   ├── ROYAL.JFIF
+│   └── Download.svg
 ├── index.html
+├── index1.html
+├── index2.html
+├── index3.html
+├── index4.html
+├── index5.html
 └── README.md
 
 ```
