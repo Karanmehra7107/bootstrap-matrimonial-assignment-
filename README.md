@@ -18,7 +18,7 @@ __Task by: LPU | Bootstapp__
   • This repository consists of files required to deploy an ___WEB PAGE___ created with ___HTML, CSS, JS, BOOTSTRAP___ on ___github.io___ platform.
     
 ## Problem statment
-Matrimonial webpage Using Bootstrap classes 
+WAP to create 6 web pages of matrimonial using css and all bootstrap classes.
 
 
    __output__
