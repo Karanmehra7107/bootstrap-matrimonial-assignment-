@@ -1,6 +1,5 @@
 # bootstrap-matrimonial-assignment-
-cap 916 assignment 1 Q2
-# Matrimonial bootstrap webpage 
+
 __Task by: LPU | Bootstapp__
 
 
