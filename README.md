@@ -64,6 +64,59 @@ This project is divided into two part:
 
 2.Usage of Bootstrap classes.
 
+ __Bootstrap scaffolding__
+ 
+ 
+• introduction to bootstrap
+• bootstrap file structure
+• basic HTML template
+• global styles
+• default grid system
+• fluid grid system
+• container layouts
+• responsive design
+
+
+__Bootstrap layout components__
+
+
+• dropdown menus
+• button groups
+• buttons with dropdowns
+• navigation elements
+• navbar
+• breadcrumbs
+• pagination
+• labels
+• badges
+• typographic elements
+
+
+__Bootstrap CSS__
+
+
+• typography
+• code
+• tables
+• buttons
+• images
+• icons
+
+
+__Bootstrap javaScript plugins__
+
+
+• modal
+• dropdown
+• scrollspy
+• toggleable tabs
+• pop-over
+• alerts
+• buttons
+• collapse
+• carousel
+• typeahead
+• affix
 
 
 ## Directory Tree 
