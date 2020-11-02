@@ -22,7 +22,7 @@ __Task by: LPU | Bootstapp__
 WAP to create 6 web pages of matrimonial using css and all bootstrap classes.
 
 
-  ##Screenshots
+  ## Screenshots
 
 ![image](https://user-images.githubusercontent.com/62024355/92404196-96eccb00-f150-11ea-9777-5ca648cd8146.png)
 
